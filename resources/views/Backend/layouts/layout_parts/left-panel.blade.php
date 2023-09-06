@@ -41,7 +41,7 @@ $route = Route::currentRouteName()
  
 
     
-    <li class="br-menu-item">
+    {{-- <li class="br-menu-item">
       <a class="br-menu-link" href="{{route('admin.crm_communication')}}" class="sub-link {{($route == 'admin.crm_create_offer' || $route == 'admin.crm_manage_offer' || $route == 'admin.crm_delete_offer') ? 'active':''}}">
         <i class="menu-item-icon icon ion-chatbox-working tx-24"></i>
         <span class="menu-item-label">Communication</span>
@@ -54,7 +54,7 @@ $route = Route::currentRouteName()
         <i class="fa fa-credit-card tx-20" aria-hidden="true"></i>
         <span class="menu-item-label">Subscription</span>
       </a><!-- br-menu-link -->
-    </li><!-- br-menu-item -->
+    </li><!-- br-menu-item --> --}}
 
 
     <li class="br-menu-item">

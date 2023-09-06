@@ -1,0 +1,260 @@
+#Payment_Confirmed {
+  background-color: #191a1c;
+  overflow-x: hidden;
+  background-color: #191a1c;
+}
+
+#Payment_Confirmed_pages .single_Services_image_gradient {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 150px;
+  background-size: cover;
+  max-width: 100%;
+}
+
+#Payment_Confirmed_pages .card_details_content {
+  padding-top: 3em;
+  padding-bottom: 3rem;
+}
+
+#Payment_Confirmed_pages .card_details_content .row {
+  justify-content: center;
+}
+
+#cart-payment {
+  gap: 40px;
+}
+#Payment_Confirmed_pages .cart_view_content {
+  border: 1px solid #a17700;
+  padding: 30px 25px;
+  height: 100%;
+}
+
+#Payment_Confirmed_pages .cart_view_products {
+  display: flex;
+  justify-content: space-between;
+}
+#Payment_Confirmed_pages .cartview_images img {
+  max-width: 120px;
+}
+#Payment_Confirmed_pages .cartview_images {
+  position: relative;
+}
+
+#Payment_Confirmed_pages .count_cart {
+  position: absolute;
+  top: -8px;
+  background: linear-gradient(to right, #f4e180, #eed86a, #b2802c);
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  right: -4px;
+}
+#Payment_Confirmed_pages .cart_content_title h3 {
+  font-size: 18px;
+  color: #fff;
+}
+
+#Payment_Confirmed_pages .cart_content_title p {
+  background: linear-gradient(to right, #b2802c, #eed86a, #b2802c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.Coupon_inner {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid #e6e6e68c;
+  border-bottom: 1px solid #e6e6e68c;
+}
+
+#Payment_Confirmed_pages #Coupon_flex {
+  display: flex;
+  gap: 15px;
+}
+#Payment_Confirmed_pages #Coupon_flex input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  background-color: #191a1c !important;
+  border-color: #f4dd62 !important;
+  color: #fff !important;
+}
+#Payment_Confirmed_pages #Coupon_flex input {
+  max-width: 270px;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  background-color: #333333 !important;
+  border-color: #f4de6286 !important;
+  color: #ffffff !important;
+  transition: 0.5s;
+  height: 40px;
+}
+#Payment_Confirmed_pages #Coupon_flex input::placeholder {
+  color: #616161 !important;
+}
+
+#Payment_Confirmed_pages #Coupon_flex button {
+  background-color: #a8a8a8;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 15px;
+}
+
+#Payment_Confirmed_pages .cartDta_sub_toal_,
+#Payment_Confirmed_pages .cartDrta_total_F {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Payment_Confirmed_pages .cartDta_sub_toal_ {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+#Payment_Confirmed_pages .cartDrta_total_F {
+  border-top: 1px solid #e6e6e68c;
+  padding-top: 20px;
+  color: #fff;
+}
+#Payment_Confirmed_pages .cartDrta_total_F p:nth-child(2) {
+  font-size: 25px;
+}
+
+#Payment_Confirmed_pages .Billing_heading_title h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+#Payment_Confirmed_pages #Card_details .shadow_img {
+  position: absolute;
+  right: -50px;
+  top: 0;
+}
+
+#Payment_Confirmed_pages .card_navigation_inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+#Payment_Confirmed_pages .card_navigation_inner a {
+  text-decoration: none;
+}
+
+#Payment_Confirmed_pages .card_navigation_inner i {
+  color: #fff;
+  font-size: 10px;
+}
+#Payment_Confirmed_pages .card_navigation_inner .cart {
+  background: linear-gradient(to right, #f4e180, #eed86a, #b2802c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#Payment_Confirmed_pages .card_navigation_inner .Details_cart {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#Payment_Confirmed_pages .card_navigation_inner .payment_card {
+  color: #dfdfdf;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#Payment_Confirmed_pages .cart_contact_heading h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#Payment_Confirmed_pages .cart_contact_heading h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #616161;
+  margin-bottom: 15px;
+}
+
+#Payment_Confirmed_pages .form_heading {
+  background: linear-gradient(to left, #b4832dab 40%, #f4de6273);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#Payment_Confirmed_pages .form_heading h3 {
+  background: linear-gradient(to right, #f4e180, #eed86a, #b2802c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.pyment_confiram_container {
+  margin-top: 4rem;
+}
+
+.pyment_confiram_container {
+  text-align: center;
+}
+
+.pyment_confiram_container h3 {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.order_uid {
+  color: #a17700;
+}
+
+.payment_order_context {
+  color: #ffffff9a;
+}
+.back_Order {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.back_Order a {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 6px 50px;
+  width: max-content;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: inset 0 9px 7px -9px #191a1c !important;
+  color: #000000 !important;
+  border-radius: 4px;
+}
+
+.print_recepit a {
+  color: #b2802c;
+  text-decoration: none;
+}
+@media screen and (min-width: 540px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 200px) and (max-width: 540px) {
+}

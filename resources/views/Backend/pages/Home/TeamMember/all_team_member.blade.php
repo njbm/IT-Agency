@@ -87,61 +87,61 @@ Admin - all TeamMember
 
     <div id="homeAddteamMember" class="modal fade effect-scale">
     <div class="modal-dialog modal-lg modal-dialog-top" role="document">
-        <div class="modal-content tx-size-sm">
-        <div class="modal-header pd-x-20">
-            <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Add teamMember</h6>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+      <div class="modal-content tx-size-sm">
+      <div class="modal-header pd-x-20">
+          <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Add teamMember</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
         <!----- Start Add Category Form ------->
        
-        <form action="{{ route('admin.add_team_member') }}" method="post" enctype="multipart/form-data">
-          @csrf
+      <form action="{{ route('admin.add_team_member') }}" method="post" enctype="multipart/form-data">
+        @csrf
           
          
-          <div class="modal-body pd-20">
+        <div class="modal-body pd-20">
 
-            <!----- Start Add Category Form input ------->
-            <div class="col-xl-12">
-                <div class="form-layout form-layout-4">
-                    <div class="row">
-                        <label class="col-sm-3 form-control-label">Member Name: </label>
-                        <div class="col-sm-9 mg-t-10 mg-sm-t-0">
-                        <input type="text" name="name" class="form-control" placeholder="Enter TeamMember Name">
-                        </div>
-                    </div><!-- row -->
-                    <div class="row">
-                        <label class="col-sm-3 form-control-label">Member Title : </label>
-                        <div class="col-sm-9 mg-t-10 mg-sm-t-0">
-                        <input type="text" name="title" class="form-control" placeholder="Enter TeamMember Title">
-                        </div>
-                    </div><!-- row -->
-                    <div class="row mt-3">
-                      <label class="col-sm-3 form-control-label">Member Image: <span class="tx-danger">*</span></label>
+          <!----- Start Add Category Form input ------->
+          <div class="col-xl-12">
+              <div class="form-layout form-layout-4">
+                  <div class="row">
+                      <label class="col-sm-3 form-control-label">Member Name: </label>
                       <div class="col-sm-9 mg-t-10 mg-sm-t-0">
-                          <input type="file" name="icon" class="form-control">
+                      <input type="text" name="name" class="form-control" placeholder="Enter TeamMember Name">
                       </div>
-                    </div><!-- row -->
-                    <div class="row">
-                        <label class="col-sm-3 form-control-label">Specialized Link: </label>
-                        <div class="col-sm-9 mg-t-10 mg-sm-t-0">
-                        <input type="text" name="link" class="form-control" placeholder="Enter TeamMember Link">
-                        </div>
-                    </div><!-- row -->
-                    <div class="row mt-3">
-                        <label class="col-sm-3 form-control-label">Specialized Icon: <span class="tx-danger">*</span></label>
-                  @foreach ($socialMediaPlatforms as $platform)
-                        <label for="{{ $platform }}_link">{{ ucfirst($platform) }}:</label>
-                        <div class="social-media-input">
-                            <i class="fab fa-{{ $platform }}" aria-hidden="true"></i>
-                            <input type="text" name="{{ $platform }}_link" id="{{ $platform }}_link">
-                        </div>
-                  @endforeach
-                    </div><!-- row -->
-                </div><!-- form-layout -->
-            </div><!-- col-6 -->
-            <!----- Start Add Category Form input ------->
+                  </div><!-- row -->
+                  <div class="row">
+                      <label class="col-sm-3 form-control-label">Member Title : </label>
+                      <div class="col-sm-9 mg-t-10 mg-sm-t-0">
+                      <input type="text" name="title" class="form-control" placeholder="Enter TeamMember Title">
+                      </div>
+                  </div><!-- row -->
+                  <div class="row mt-3">
+                    <label class="col-sm-3 form-control-label">Member Image: <span class="tx-danger">*</span></label>
+                    <div class="col-sm-9 mg-t-10 mg-sm-t-0">
+                        <input type="file" name="icon" class="form-control">
+                    </div>
+                  </div><!-- row -->
+                  <div class="row">
+                      <label class="col-sm-3 form-control-label">Specialized Link: </label>
+                      <div class="col-sm-9 mg-t-10 mg-sm-t-0">
+                      <input type="text" name="link" class="form-control" placeholder="Enter TeamMember Link">
+                      </div>
+                  </div><!-- row -->
+                  <div class="row mt-3">
+                      <label class="col-sm-3 form-control-label">Specialized Icon: <span class="tx-danger">*</span></label>
+                @foreach ($socialMediaPlatforms as $platform)
+                      <label for="{{ $platform }}_link">{{ ucfirst($platform) }}:</label>
+                      <div class="social-media-input">
+                          <i class="fab fa-{{ $platform }}" aria-hidden="true"></i>
+                          <input type="text" name="{{ $platform }}_link" id="{{ $platform }}_link">
+                      </div>
+                @endforeach
+                  </div><!-- row -->
+              </div><!-- form-layout -->
+          </div><!-- col-6 -->
+          <!----- Start Add Category Form input ------->
 
         </div><!-- modal-body -->
 
