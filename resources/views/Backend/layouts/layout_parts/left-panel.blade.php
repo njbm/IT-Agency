@@ -36,7 +36,25 @@ $route = Route::currentRouteName()
       <li class="sub-item"><a href="{{ route('admin.all_technology') }}" class="sub-link {{ ($route == 'admin.all_technology' || $route == 'admin.add_technology' || $route == 'admin.edit_technology' || $route == 'admin.update_technology')? 'active':'' }}">Technology</a></li>
       <li class="sub-item"><a href="{{ route('admin.all_specialized') }}" class="sub-link {{ ($route == 'admin.all_specialized' || $route == 'admin.add_specialized' || $route == 'admin.edit_specialized' || $route == 'admin.update_specialized')? 'active':'' }}">Specialized</a></li>
       <li class="sub-item"><a href="{{ route('admin.all_team_member') }}" class="sub-link {{ ($route == 'admin.all_team_member' || $route == 'admin.add_team_member' || $route == 'admin.edit_team_member' || $route == 'admin.update_team_member')? 'active':'' }}">Team Member</a></li>
+     
+      <li class="sub-item"><a href="{{ route('admin.all_langing_page') }}" class="sub-link {{ ($route == 'admin.all_langing_page' || $route == 'admin.add_langing_page' || $route == 'admin.edit_langing_page' || $route == 'admin.update_langing_page')? 'active':'' }}">Langing Page </a></li>
+      <li class="sub-item"><a href="{{ route('admin.all_company_detail') }}" class="sub-link {{ ($route == 'admin.all_company_detail' || $route == 'admin.add_company_detail' || $route == 'admin.edit_company_detail' || $route == 'admin.update_company_detail')? 'active':'' }}"> Company Detail </a></li>
+      
+    </ul>
+     <!-- services route statr ---------------->
+     <li class="br-menu-item">
+      <a href="#" class="br-menu-link with-sub {{($prefix=='services')?'show-sub':''}}">
+          <i class="menu-item-icon icon ion-person-stalker tx-20"></i>
+          <span class="menu-item-label">Services</span>
+        </a><!-- br-menu-link -->
+        <ul class="br-menu-sub nav flex-column">
+  
+        <li class="sub-item"><a href="{{route('service.all_service_category')}}" class="sub-link {{ ($route == 'service.all_service_category' || $route == 'service.add_category' || $route == 'service.edit_category' || $route == 'service.update_category')? 'active':'' }}">Category</a></li>
+        <li class="sub-item"><a href="{{route('service.all_service_subcategory')}}" class="sub-link {{ ($route == 'service.all_service_subcategory' || $route == 'service.add_subcategory' || $route == 'service.edit_subcategory' || $route == 'service.update_subcategory')? 'active':'' }}">Sub Category</a></li>
       </ul>
+      </li><!-- br-menu-item -->
+  
+  <!-- services route end---------- -->
 
  
 
@@ -84,6 +102,7 @@ $route = Route::currentRouteName()
           <li class="sub-item"><a href="{{ url('pages') }}" class="sub-link {{ ($route == 'pages')? 'active':'' }}">About of our company</a></li>
           <li class="sub-item"><a href="{{ url('social') }}" class="sub-link {{ ($route == 'social')? 'active':'' }}">Social Media</a></li>
           <li class="sub-item"><a href="{{ url('contract') }}" class="sub-link {{ ($route == 'contract')? 'active':'' }}">Contract</a></li>
+          
         </ul>
     </li><!-- br-menu-item -->
 

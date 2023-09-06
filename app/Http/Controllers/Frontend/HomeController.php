@@ -3,6 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomeClient;
+use App\Models\HomeClientReview;
+use App\Models\HomePartner;
+use App\Models\ServiceCategory;
+use App\Models\Specialized;
 use App\Models\TechnologyCategory;
 use Illuminate\Http\Request;
 
@@ -10,7 +15,13 @@ class HomeController extends Controller
 {
     public function index(){
         $technology= TechnologyCategory::all();
-        return view('frontend.index', compact('technology'));
+        $partner= HomePartner::all();
+        $client= HomeClient::all();
+        $specialized = Specialized::all();
+        $client_reviews= HomeClientReview::all();
+        $category= ServiceCategory::all();
+        return view('frontend.index', compact('technology','partner','client',
+        'category','specialized','client_reviews'));
     }
     public function about(){
         return view('Frontend.about');

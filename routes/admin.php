@@ -16,6 +16,14 @@ use App\Http\Controllers\Backend\Specialized\SpecializedController;
 use App\Http\Controllers\Backend\TeamMember\TeamMemberController;
 use App\Http\Controllers\Backend\Technology\TechnologyController;
 
+use App\Http\Controllers\Backend\Home\ComapnyDetailController;
+use App\Http\Controllers\Backend\Home\LangingPageController;
+
+
+// Service Manage
+use App\Http\Controllers\Backend\Services\ServiceCategoryController;
+use App\Http\Controllers\Backend\Services\ServiceSubCategoryController;
+
 use App\Http\Controllers\Backend\Department\departmentController as DepartmentDepartmentController;
 
 
@@ -55,6 +63,8 @@ use App\Http\Controllers\Backend\Setting\Limit\limitController;
 //############################## Start Home Route ####################################
 
 Route::prefix('admin/home')->group(function(){
+
+
 
     //Category Route
     Route::get('/all-category',[CategoryController::class, 'all_category'])->name('admin.all_category');
@@ -171,10 +181,46 @@ Route::prefix('admin/home')->group(function(){
     Route::post('/update-team_member/{id}',[TeamMemberController::class, 'update_team_member'])->name('update_team_member.update_specialized');
     Route::post('/delete-team_member',[TeamMemberController::class, 'delete_team_member'])->name('admin.delete_team_member');
     
+     //Langing Page Route
+     Route::get('/all-langing_page',[LangingPageController::class, 'all_langing_page'])->name('admin.all_langing_page');
+     Route::post('/add-langing_page',[LangingPageController::class, 'add_langing_page'])->name('admin.add_langing_page');
+     Route::get('/edit-langing_page/{id}',[LangingPageController::class, 'edit_langing_page'])->name('admin.edit_langing_page');
+     Route::post('/update-langing_page/{id}',[LangingPageController::class, 'update_langing_page'])->name('admin.update_langing_page');
+ 
+ 
+    //Company Detail Route
+     Route::get('/all-company-detail',[ComapnyDetailController::class, 'all_company_detail'])->name('admin.all_company_detail');
+     Route::post('/add-company-detail',[ComapnyDetailController::class, 'add_company_detail'])->name('admin.add_company_detail');
+     Route::get('/edit-company-detail/{id}',[ComapnyDetailController::class, 'edit_company_detail'])->name('admin.edit_company_detail');
+     Route::post('/update-company-detail/{id}',[ComapnyDetailController::class, 'update_company_detail'])->name('admin.update_company_detail');
+     Route::post('/delete-company-detail',[ComapnyDetailController::class, 'delete_company_detail'])->name('admin.
+     delete_company_detail');
 
 }); //home route goruo ends
 
 //############################## End Home Route ####################################
+
+//############################## Start Service  Route ####################################
+Route::prefix('services')->group(function () {
+    // service category-------------
+    Route::get('/all-category',[ServiceCategoryController::class, 'all_Service_category'])->name('service.all_service_category');
+    Route::post('/add-category',[ServiceCategoryController::class, 'add_Service_category'])->name('service.add_category');
+    Route::get('/edit-category/{id}',[ServiceCategoryController::class, 'edit_Service_category'])->name('service.edit_category');
+    Route::post('/update-category/{id}',[ServiceCategoryController::class, 'update_Service_category'])->name('service.update_category');
+    Route::post('/delete-category',[ServiceCategoryController::class, 'delete_Service_category'])->name('service.delete_category');
+
+
+
+    // service subcategory-------------
+    Route::get('/all-subcategory',[ServiceSubCategoryController::class, 'all_Service_subcategory'])->name('service.all_service_subcategory');
+    Route::post('/add-subcategory',[ServiceSubCategoryController::class, 'add_Service_subcategory'])->name('service.add_subcategory');
+    Route::get('/edit-subcategory/{id}',[ServiceSubCategoryController::class, 'edit_Service_subcategory'])->name('service.edit_subcategory');
+    Route::post('/update-subcategory/{id}',[ServiceSubCategoryController::class, 'update_Service_subcategory'])->name('service.update_subcategory');
+    Route::post('/delete-subcategory',[ServiceSubCategoryController::class, 'delete_Service_subcategory'])->name('service.delete_subcategory');
+
+});
+//############################## End Service Route ####################################
+
 
 
  // CRM route group start here

@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -48,8 +48,8 @@ Route::get('/technology', [HomeController::class, 'technology'])->name('frontend
 Route::get('/service_view', [HomeController::class, 'service_view'])->name('frontend.servicesView');
 
 
-Route::get('/user_login', [HomeController::class, 'login'])->name('frontend.login');
-Route::get('/user_register', [HomeController::class, 'register'])->name('frontend.register');
+// Route::get('/user_login', [HomeController::class, 'login'])->name('frontend.login');
+// Route::get('/user_register', [HomeController::class, 'register'])->name('frontend.register');
 
 
 

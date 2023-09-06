@@ -19,4 +19,5 @@
     <link rel="stylesheet" href="{{asset('Frontend/assets/CSS/services.css')}}" /> <!--service css-->
     <link rel="stylesheet" href="{{asset('Frontend/assets/CSS/Project.css')}}" /> <!--Project css-->
     <link rel="stylesheet" href="{{asset('Frontend/assets/CSS/servicesView.css')}}" /> <!--servicesView css-->
+    <link rel="stylesheet" href="{{asset('Frontend/assets/CSS/contact.css')}}" /> <!--servicesView css-->
 

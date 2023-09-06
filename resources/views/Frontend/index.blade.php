@@ -120,20 +120,22 @@ Front Page
           </div>
         </div>
         <div class="row mt-5 pt-3">
+          @foreach ($category as $cat)
           <div class="col-lg-4 col-md-4 card-content">
             <div
               class="services_cardInner"
               style="
-                background-image: url('{{ asset('Frontend/assets/images/Rectangle 699.png') }}');"
+                background-image: url('{{asset('backend/services/images/'. $cat->image)}}');"
             >
               <a href="#">
                 <div class="card_contaent">
-                  <img src="{{asset('Frontend/assets/images/Rectangle 728.png')}}" alt="" />
-                  <h4>WEB DESIGN</h4>
+                  <img src="{{asset('backend/services/images/'. $cat->icon)}}" alt="" />
+                  <h4>{{ $cat->cat_name }}</h4>
                 </div>
               </a>
             </div>
           </div>
+          @endforeach
           <div class="col-lg-4 col-md-4 card-content">
             <div
               class="services_cardInner"
@@ -237,6 +239,22 @@ Front Page
           </div>
         </div>
         <div class="row mt-5 our_client">
+          @foreach ($client as $client )
+          <div class="col-lg-2">
+            <div class="clinet_brand">
+              <img src="{{asset('backend/home/client/'. $client->client_logo)}}" alt="" />
+            </div>
+          </div>@endforeach
+          {{-- <div class="col-lg-2">
+            <div class="clinet_brand">
+              <img src="{{asset('Frontend/assets/images/MGV5G.png')}}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="clinet_brand">
+              <img src="{{asset('Frontend/assets/images/WKuV6.png')}}" alt="" />
+            </div>
+          </div>
           <div class="col-lg-2">
             <div class="clinet_brand">
               <img src="{{asset('Frontend/assets/images/FPmZo.png')}}" alt="" />
@@ -251,22 +269,7 @@ Front Page
             <div class="clinet_brand">
               <img src="{{asset('Frontend/assets/images/WKuV6.png')}}" alt="" />
             </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="clinet_brand">
-              <img src="{{asset('Frontend/assets/images/FPmZo.png')}}" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="clinet_brand">
-              <img src="{{asset('Frontend/assets/images/MGV5G.png')}}" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="clinet_brand">
-              <img src="{{asset('Frontend/assets/images/WKuV6.png')}}" alt="" />
-            </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -274,7 +277,7 @@ Front Page
   <!-- ======== Client  ============= -->
 
   <!-- ===========Catagoires Inner ========= -->
-  <section class="in_catagoiresInner">
+  {{-- <section class="in_catagoiresInner">
     <div class="ind_catagories_container">
       <div class="container">
         <div class="Catagoiresclient_heading">
@@ -597,7 +600,7 @@ Front Page
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
   <!-- ============= Ctagoires Inner ========== -->
 
   <!-- ========  Meet Our PartNer  ============= -->
@@ -616,6 +619,24 @@ Front Page
           </div>
         </div>
         <div class="row mt-5 our_client">
+          @foreach ($partner as $partner )
+           
+          <div class="col-lg-2">
+            <div class="clinet_brand">
+              <img src="{{asset('backend/home/partner/'. $partner->partner_logo)}}" alt="" />
+            </div>
+          </div>
+          @endforeach
+          {{-- <div class="col-lg-2">
+            <div class="clinet_brand">
+              <img src="{{asset('Frontend/assets/images/MGV5G.png')}}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="clinet_brand">
+              <img src="{{asset('Frontend/assets/images/WKuV6.png')}}" alt="" />
+            </div>
+          </div>
           <div class="col-lg-2">
             <div class="clinet_brand">
               <img src="{{asset('Frontend/assets/images/FPmZo.png')}}" alt="" />
@@ -630,22 +651,7 @@ Front Page
             <div class="clinet_brand">
               <img src="{{asset('Frontend/assets/images/WKuV6.png')}}" alt="" />
             </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="clinet_brand">
-              <img src="{{asset('Frontend/assets/images/FPmZo.png')}}" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="clinet_brand">
-              <img src="{{asset('Frontend/assets/images/MGV5G.png')}}" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="clinet_brand">
-              <img src="{{asset('Frontend/assets/images/WKuV6.png')}}" alt="" />
-            </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -892,7 +898,7 @@ Front Page
             </div>
           </div>
           @endforeach
-          <div class="col-lg-2">
+          {{-- <div class="col-lg-2">
             <div class="clinet_brand">
               <img src="{{asset('Frontend/assets/images/image 6.png')}}" alt="" />
             </div>
@@ -919,7 +925,7 @@ Front Page
             <div class="clinet_brand">
               <img src="{{asset('Frontend/assets/images/image 3.png')}}" alt="" />
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -940,17 +946,20 @@ Front Page
         </div>
         <!-- ====== _Specialized_services inner =========== -->
         <div class="row mt-5 pt-2">
+          @foreach ($specialized as $specialized)
           <div class="col-lg-4">
             <div class="Indservice_inner_specialized">
               <div class="logos_specialized">
-                <img src="{{asset('Frontend/assets/images/icon/frontend 2.png')}}" alt="" />
+                <img src="{{asset('backend/home/Specialized/'. $specialized->icon)}}" alt="" />
               </div>
               <div class="Indservice_inner_specialized_title">
-                <h5>Frontend Engineers</h5>
+                <h5>{{ $specialized->title }}</h5>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          @endforeach
+
+          {{-- <div class="col-lg-4">
             <div class="Indservice_inner_specialized">
               <div class="logos_specialized">
                 <img
@@ -1030,7 +1039,7 @@ Front Page
                 <h5>PHP Developers</h5>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="col-lg-4">
             <div class="Indservice_inner_specialized">
               <div class="logos_specialized">
@@ -1212,18 +1221,17 @@ Front Page
         <!-- ======= Client Tesimonials  =========== -->
         <div class="client_testimonials">
           <div class="row mt-5 pt-4 Client_memberSlide">
+            @foreach ($client_reviews as $client_review)
             <div class="col-lg-3">
               <div class="tema_member_container">
                 <div class="tem-member_content">
                   <div class="images">
-                    <img src="{{asset('Frontend/assets/images/Rectangle 18 (1).png')}}" alt="" />
+                    <img src="{{asset('backend/home/client_review/'. $client_review->client_image)}}" alt="" />
                   </div>
                   <div class="member_content">
-                    <h4>Mason Campbell</h4>
+                    <h4>{{ $client_review->client_name }}</h4>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing
-                      elit. A fringilla at gravida justo, felis risus
-                      ullamcorper augue tempus. Nam hac.
+                      {!! $client_review->client_comment !!}
                     </p>
                   </div>
                   <div class="clinet_ratting">
@@ -1248,6 +1256,7 @@ Front Page
                 </div>
               </div>
             </div>
+            @endforeach
             <div class="col-lg-3">
               <div class="tema_member_container">
                 <div class="tem-member_content">

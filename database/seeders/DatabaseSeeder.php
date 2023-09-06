@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             CreateSocialSeeder::class,
             CreateGeneralSeeder::class,
             CreateContractSeeder::class,
+            LangingPageSeeder::class,
         ]);
     }
 }
